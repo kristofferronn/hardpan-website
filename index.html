@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collapse: The Aegean Expanse | Hardpan Games</title>
+<meta name="description" content="Collapse: The Aegean Expanse is a Bronze Age city-builder where every jug of water is carried by a real person, and the end of the world arrives as a drought. In development at Hardpan Games.">
+<meta property="og:title" content="Collapse: The Aegean Expanse">
+<meta property="og:description" content="A Bronze Age city-builder where nothing teleports and the end of the world arrives as a drought.">
+<meta property="og:image" content="images/village-day-one.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fresco-blue: #2B5C7A;
+    --fresco-blue-deep: #214A63;
+    --saffron: #E0A43A;
+    --madder: #9C3A2C;
+    --plaster: #EDE6D6;
+    --plaster-shade: #E2D8C3;
+    --soot: #24211E;
+    --soot-soft: #4A443D;
+    --measure: 38rem;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--plaster);
+    color: var(--soot);
+    font-family: "Instrument Sans", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+
+  .wrap { width: min(72rem, 100% - 2rem); margin-inline: auto; }
+
+  /* ---------- Hero: the blue fresco band ---------- */
+  .hero {
+    background: var(--fresco-blue);
+    color: var(--plaster);
+    padding: 1.75rem 0 4rem;
+  }
+  .studio {
+    font-family: "Young Serif", Georgia, serif;
+    font-size: 1.125rem;
+    letter-spacing: 0.01em;
+    margin: 0 0 3.5rem;
+    color: var(--plaster);
+  }
+  .studio span { color: var(--saffron); }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+  }
+  @media (min-width: 60rem) {
+    .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3.5rem; }
+  }
+
+  h1 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    line-height: 1.02;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  h1 .sub {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    color: var(--plaster-shade);
+  }
+  .lede {
+    font-size: 1.1875rem;
+    line-height: 1.55;
+    max-width: 32rem;
+    margin: 0 0 2rem;
+  }
+
+  /* Sign-up */
+  .signup { max-width: 30rem; }
+  .signup label { display: block; font-weight: 500; margin-bottom: 0.5rem; }
+  .signup-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .signup input[type="email"] {
+    flex: 1 1 14rem;
+    min-width: 0;
+    font: inherit;
+    padding: 0.75rem 0.875rem;
+    border: 2px solid var(--plaster);
+    border-radius: 2px;
+    background: var(--plaster);
+    color: var(--soot);
+  }
+  .signup button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--saffron);
+    border-radius: 2px;
+    background: var(--saffron);
+    color: var(--soot);
+    cursor: pointer;
+  }
+  .signup button:hover { background: #EAB453; }
+  .signup .note { font-size: 0.9375rem; margin: 0.625rem 0 0; color: var(--plaster-shade); }
+  .signup .status { min-height: 1.6em; margin: 0.5rem 0 0; font-weight: 500; }
+
+  .shot { margin: 0; }
+  .shot img {
+    width: 100%;
+    height: auto;
+    border: 6px solid var(--plaster);
+    background: var(--soot);
+  }
+  .shot figcaption {
+    font-size: 0.9375rem;
+    margin-top: 0.75rem;
+    color: var(--plaster-shade);
+  }
+
+  /* ---------- The running-spiral border between bands ---------- */
+  .band-border {
+    height: 52px;
+    background-color: var(--madder);
+    background-image: url("images/running-spiral.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 40px 40px;
+    border-top: 6px solid var(--fresco-blue-deep);
+    border-bottom: 6px solid var(--saffron);
+  }
+
+  /* ---------- What the game is ---------- */
+  .about { padding: 4.5rem 0 3.5rem; }
+  .about h2, .follow h2 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, 2.375rem);
+    line-height: 1.15;
+    margin: 0 0 2.5rem;
+    max-width: 30ch;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem 3rem;
+  }
+  @media (min-width: 52rem) {
+    .pillars { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  .pillar h3 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    margin: 0 0 0.625rem;
+    padding-top: 0.875rem;
+    border-top: 3px solid var(--madder);
+  }
+  .pillar p { margin: 0; max-width: var(--measure); color: var(--soot-soft); }
+
+  /* ---------- Where it stands ---------- */
+  .status-band {
+    background: var(--plaster-shade);
+    padding: 3rem 0;
+  }
+  .status-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+  @media (min-width: 52rem) {
+    .status-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: start; }
+  }
+  .status-band h2 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.625rem;
+    margin: 0;
+  }
+  .status-band p { margin: 0 0 1rem; max-width: var(--measure); }
+  .status-band p:last-child { margin-bottom: 0; }
+
+  /* ---------- Follow ---------- */
+  .follow { background: var(--fresco-blue); color: var(--plaster); padding: 4rem 0; }
+  .follow h2 { margin-bottom: 1.25rem; }
+  .follow p { max-width: var(--measure); margin: 0 0 1.75rem; }
+
+  footer {
+    background: var(--soot);
+    color: var(--plaster-shade);
+    font-size: 0.9375rem;
+    padding: 1.75rem 0;
+  }
+  .footer-row { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; }
+  footer p { margin: 0; }
+  footer a { color: var(--plaster); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="studio">Hardpan Games</p>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Collapse<span class="sub">The Aegean Expanse</span></h1>
+        <p class="lede">A Bronze Age city-builder where nothing teleports. Every jug of water is carried by a named person, every road is worn in by their feet, and the end of the world arrives as a drought.</p>
+
+        <form class="signup" id="signup" action="" method="post" novalidate>
+          <label for="email">Follow development by email</label>
+          <div class="signup-row">
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            <button type="submit">Sign up</button>
+          </div>
+          <p class="note">A short update when something real happens. No spam; unsubscribe any time.</p>
+          <p class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <figure class="shot">
+        <img src="images/village-day-one.jpg" width="1740" height="684"
+             alt="A small grey-box village: two houses, a well, a field with crop rows, a domed kiln, a clay pit, trees and a few villagers, all as simple shapes.">
+        <figcaption>Day one, October 2026: the grey-box village, every piece at true scale.</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<div class="band-border" role="presentation"></div>
+
+<main>
+  <section class="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">Survive the collapse of 1177 BC, one carried jug at a time</h2>
+      <div class="pillars">
+        <article class="pillar">
+          <h3>Everyone is someone</h3>
+          <p>Your people are individuals with homes, trades and families. There are no throwaway armies: send men to sea and the fields at home go unharvested.</p>
+        </article>
+        <article class="pillar">
+          <h3>Everything is carried</h3>
+          <p>There is no global stockpile. Water travels in jugs fired at your kiln, grain in baskets on someone's back. A well placed too far away is a problem you can see from the walking.</p>
+        </article>
+        <article class="pillar">
+          <h3>The world ends slowly</h3>
+          <p>Droughts come first, then the raiders and the broken trade routes. Your palace economy has to be taken apart in time to save the people inside it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="status-band" aria-labelledby="status-title">
+    <div class="wrap status-grid">
+      <h2 id="status-title">Where it stands</h2>
+      <div>
+        <p>Collapse is in early development by Hardpan Games, a one-person studio. Right now the simulation core and a grey-box village are being built and tested: people, water, food, clay and timber, and a drought that tests whether your village can adapt.</p>
+        <p>A Kickstarter is planned for spring 2027, once a playable piece of the game looks the way it should. Sign up to hear when it goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow" aria-labelledby="follow-title">
+    <div class="wrap">
+      <h2 id="follow-title">Watch it being built</h2>
+      <p>Short clips of paths wearing into the ground, wells running dry and villages that almost make it. One email when there is something worth showing.</p>
+      <form class="signup" id="signup-2" action="" method="post" novalidate>
+        <label for="email-2">Your email</label>
+        <div class="signup-row">
+          <input type="email" id="email-2" name="email" autocomplete="email" placeholder="you@example.com" required>
+          <button type="submit">Sign up</button>
+        </div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>© 2026 Hardpan Games</p>
+    <p><a href="mailto:hello@hardpangames.com">hello@hardpangames.com</a></p>
+  </div>
+</footer>
+
+<script>
+  /*
+    Email sign-up setup (KR-06):
+    Paste the form address your email service gives you into SIGNUP_ACTION, for example
+      Buttondown: "https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME"
+      Mailchimp:  the "action" URL from Mailchimp's embedded form code
+    Until it is set, the form shows a friendly message instead of sending anything.
+  */
+  const SIGNUP_ACTION = "";
+
+  document.querySelectorAll("form.signup").forEach(function (form) {
+    if (SIGNUP_ACTION) {
+      form.action = SIGNUP_ACTION;
+    }
+    form.addEventListener("submit", function (event) {
+      const input = form.querySelector('input[type="email"]');
+      const status = form.querySelector(".status");
+      if (!input.value || !input.checkValidity()) {
+        event.preventDefault();
+        status.textContent = "Enter an email address like name@example.com.";
+        input.focus();
+        return;
+      }
+      if (!SIGNUP_ACTION) {
+        event.preventDefault();
+        status.textContent = "Sign-up opens in a few days. Thanks for your patience.";
+      }
+    });
+  });
+</script>
+</body>
+</html>
