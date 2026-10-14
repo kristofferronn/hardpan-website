@@ -7,7 +7,10 @@
 <meta name="description" content="Collapse: The Aegean Expanse is a Bronze Age city-builder where every jug of water is carried by a real person, and the end of the world arrives as a drought. In development at Hardpan Games.">
 <meta property="og:title" content="Collapse: The Aegean Expanse">
 <meta property="og:description" content="A Bronze Age city-builder where nothing teleports and the end of the world arrives as a drought.">
-<meta property="og:image" content="images/village-day-one.jpg">
+<meta property="og:image" content="https://hardpangames.com/images/village-day-one.jpg">
+<meta property="og:url" content="https://hardpangames.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
@@ -289,7 +292,8 @@
       <h2 id="status-title">Where it stands</h2>
       <div>
         <p>Collapse is in early development by Hardpan Games, a one-person studio. I design it and make the art myself, and AI tools do much of the coding.</p>
-        <p>The simulation already runs a grey-box village of 30 people who draw water, farm, dig clay, fell trees, fire new jugs and build houses, with every load carried by hand and paths wearing in where they walk. Next come woodcutters' camps and farms, families with children who grow up, and roads, then the first outside playtests in December, while the final art is made alongside.</p>
+        <p>The simulation runs in a grey box: people draw water, sow and reap barley one square metre at a time, dig clay, fell trees, fire new jugs and build houses, with every load carried by hand. Families move into new houses and children grow up. Paths wear into the ground where people walk, and the land dries out when the rain fails.</p>
+        <p>Right now I'm building the real opening: four settlers, a pile of cargo and a spring, and the first choice of where to live. Roads come next, then the first outside playtests in December, while the final art is made alongside.</p>
         <p>A Kickstarter is planned for spring 2027, once a playable piece of the game looks the way it should. Sign up to hear when it goes live.</p>
       </div>
     </div>
@@ -327,7 +331,7 @@
       Mailchimp:  the "action" URL from Mailchimp's embedded form code
     Until it is set, the form shows a friendly message instead of sending anything.
   */
-  const SIGNUP_ACTION = "";
+  const SIGNUP_ACTION = "https://buttondown.com/api/emails/embed-subscribe/hardpangames";
 
   document.querySelectorAll("form.signup").forEach(function (form) {
     if (SIGNUP_ACTION) {
