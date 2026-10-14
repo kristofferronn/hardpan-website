@@ -209,6 +209,20 @@
   .status-band p { margin: 0 0 1rem; max-width: var(--measure); }
   .status-band p:last-child { margin-bottom: 0; }
 
+  /* ---------- Who's making it ---------- */
+  .maker { padding: 3.5rem 0; }
+  .maker-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.5rem; }
+  .maker img { width: 9rem; height: 9rem; border-radius: 50%; flex: 0 0 auto; }
+  .maker-text { flex: 1 1 20rem; max-width: var(--measure); }
+  .maker h2 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.625rem;
+    margin: 0 0 0.75rem;
+  }
+  .maker p { margin: 0 0 0.5rem; }
+  .maker .sign { color: var(--soot-soft); margin: 0; }
+
   /* ---------- Follow ---------- */
   .follow { background: var(--fresco-blue); color: var(--plaster); padding: 4rem 0; }
   .follow h2 { margin-bottom: 1.25rem; }
@@ -241,7 +255,6 @@
       <div>
         <h1>Collapse<span class="sub">The Aegean Expanse</span></h1>
         <p class="lede">Build a thriving empire and witness its decline. Survive the Bronze Age Collapse, one disaster after another.</p>
-        <p class="genre">A Bronze Age civilization survival game.</p>
 
         <form class="signup" id="signup" action="" method="post" novalidate>
           <label for="email">Follow development by email</label>
@@ -295,6 +308,17 @@
         <p>The simulation runs in a grey box: people draw water, sow and reap barley one square metre at a time, dig clay, fell trees, fire new jugs and build houses, with every load carried by hand. Families move into new houses and children grow up. Paths wear into the ground where people walk, and the land dries out when the rain fails.</p>
         <p>Right now I'm building the real opening: four settlers, a pile of cargo and a spring, and the first choice of where to live. Roads come next, then the first outside playtests in December, while the final art is made alongside.</p>
         <p>A Kickstarter is planned for spring 2027, once a playable piece of the game looks the way it should. Sign up to hear when it goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="maker" aria-labelledby="maker-title">
+    <div class="wrap maker-row">
+      <img src="images/kristoffer.png" width="298" height="300" alt="Kristoffer, the developer, smiling in front of green leaves.">
+      <div class="maker-text">
+        <h2 id="maker-title">Who's making it</h2>
+        <p>I love strategy and survival games, and I'm fascinated by history: what makes great civilizations rise, and what makes them fall. Collapse: The Aegean Expanse is where those two things meet.</p>
+        <p class="sign">Kristoffer, Hardpan Games</p>
       </div>
     </div>
   </section>
