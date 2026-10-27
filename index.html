@@ -193,6 +193,35 @@
   }
   .pillar p { margin: 0; max-width: var(--measure); color: var(--soot-soft); }
 
+  /* ---------- At a glance (facts for players, press and AI search) ---------- */
+  .facts { padding: 3.5rem 0 0.5rem; }
+  .facts h2 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.625rem;
+    margin: 0 0 1.25rem;
+  }
+  .facts dl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin: 0;
+    border-top: 3px solid var(--saffron);
+  }
+  @media (min-width: 52rem) {
+    .facts dl { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; }
+  }
+  .facts .fact {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--raised);
+  }
+  .facts dt { font-weight: 600; color: var(--soot-soft); }
+  .facts dd { margin: 0; overflow-wrap: anywhere; }
+  @media (min-width: 52rem) { .facts .fact { grid-template-columns: 9rem minmax(0, 1fr); } }
+
   /* ---------- Where it stands ---------- */
   .status-band {
     background: var(--raised);
@@ -309,6 +338,22 @@
     * { scroll-behavior: auto !important; transition: none !important; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Collapse: The Aegean Expanse",
+  "description": "A Bronze Age city-builder where every jug of water is carried by someone you know, and the end of the world arrives as a drought.",
+  "genre": ["City-builder", "Survival", "Strategy", "Simulation"],
+  "gamePlatform": "PC",
+  "operatingSystem": "Windows",
+  "playMode": "SinglePlayer",
+  "url": "https://hardpangames.com/",
+  "image": "https://hardpangames.com/images/hero-d-shore.jpg",
+  "author": { "@type": "Organization", "name": "Hardpan Games", "url": "https://hardpangames.com/" },
+  "publisher": { "@type": "Organization", "name": "Hardpan Games" }
+}
+</script>
 </head>
 <body>
 
@@ -334,8 +379,8 @@
       </div>
 
       <figure class="shot">
-        <img src="images/hero-b-golden.jpg" width="1440" height="810"
-             alt="A small village seen from above in warm evening light: white houses with timber-framed walls, worn paths between them, a farmed plot behind, round domed workshops, and green shrubs and trees scattered over dry ochre ground.">
+        <img src="images/hero-d-shore.jpg" width="1440" height="810"
+             alt="A sandy Aegean shore at evening: turquoise shallows with dark seagrass patches, two palms on the beach, low green shrubs and dry ochre ground running down to the water.">
         <figcaption><span class="quote">Every great civilization is remembered throughout time. So is its fall.</span>
           <span class="credit">Grey box, October 2026: every piece at true scale.</span></figcaption>
       </figure>
@@ -375,6 +420,28 @@
         <p>Next: village life (feasts, a communal tomb, tools that wear out) and the first playtests with outside players in November, while the final art is made alongside.</p>
         <p>A Kickstarter is planned for spring 2027, once a playable piece of the game looks the way it should. Sign up to hear when it goes live.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- At a glance: the plain facts, so players, press and AI search tools describe the game the same way.
+       Keep it in step with the JSON-LD block in <head>. -->
+  <section class="facts" aria-labelledby="facts-title">
+    <div class="wrap">
+      <h2 id="facts-title">At a glance</h2>
+      <dl>
+        <div class="fact"><dt>Game</dt><dd>Collapse: The Aegean Expanse</dd></div>
+        <div class="fact"><dt>Genre</dt><dd>City-builder and survival strategy, with a logistics simulation at its core</dd></div>
+        <div class="fact"><dt>Setting</dt><dd>Bronze Age Crete and the Aegean, around 1500–1177 BC, through to the Bronze Age Collapse</dd></div>
+        <div class="fact"><dt>In one line</dt><dd>A Bronze Age city-builder where every jug of water is carried by someone you know</dd></div>
+        <div class="fact"><dt>For fans of</dt><dd>Banished, Farthest Frontier, Songs of Syx</dd></div>
+        <div class="fact"><dt>Platform</dt><dd>PC (Windows)</dd></div>
+        <div class="fact"><dt>Players</dt><dd>Single-player</dd></div>
+        <div class="fact"><dt>Status</dt><dd>In development; first playtests in November 2026</dd></div>
+        <div class="fact"><dt>Kickstarter</dt><dd>Planned for spring 2027</dd></div>
+        <div class="fact"><dt>Studio</dt><dd>Hardpan Games, a one-person studio</dd></div>
+        <div class="fact"><dt>Art</dt><dd>Made by hand, without generative AI</dd></div>
+        <div class="fact"><dt>Contact</dt><dd><a href="mailto:hello@hardpangames.com">hello@hardpangames.com</a></dd></div>
+      </dl>
     </div>
   </section>
 
